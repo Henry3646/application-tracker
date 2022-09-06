@@ -1,0 +1,43 @@
+.app__form-container {
+  background-color: var(--secondary-black);
+  border: 5px solid var(--primary-blue);
+  border-radius: 20px;
+}
+@media screen and (max-width: 900px) {
+  .app__form-container {
+    transform: scale(0.85);
+  }
+}
+.app__form-container form {
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 1.5rem;
+}
+.app__form-container form .app__form-title {
+  font-size: 2rem;
+}
+.app__form-container form input {
+  width: 17.5rem;
+  padding: 1rem;
+  outline: none;
+  border: 2px solid var(--primary-blue);
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+.app__form-container form input:hover, .app__form-container form input:focus {
+  box-shadow: 0 0 10px 1px var(--primary-blue);
+}
+.app__form-container form button {
+  padding: 1rem 3rem;
+  color: var(--secondary-black);
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 2px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+}
+.app__form-container form button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 1px var(--primary-blue);
+}/*# sourceMappingURL=Form.css.map */

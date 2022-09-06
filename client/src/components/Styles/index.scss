@@ -1,0 +1,18 @@
+:root {
+    --primary-black: #000000;
+    --secondary-black: #000000;
+    --primary-blue: #09ff00;
+}
+
+body {
+    background-color: var(--primary-black);
+    color: var(--primary-blue);  
+    font-family: 'Roboto', sans-serif;  
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#root {
+    min-height: 80vh;
+    position: relative;
+}

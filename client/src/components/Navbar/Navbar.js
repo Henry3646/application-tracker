@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className='app__navbar-user app__flex'>
             {user ? (
                 <div className='user-profile app__flex'>
-                    <div className='user-name'> Welcome {user.result.user}</div>
+                    <div className='user-name'> Welcome! {user.result.user}</div>
                     <button className='logout' onClick={logout}>Logout</button>
                 </div>
             ) : (

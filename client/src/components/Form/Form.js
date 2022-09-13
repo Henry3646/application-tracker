@@ -8,7 +8,8 @@ const Form = ({ currentId, setCurrentId}) => {
 
   const app = useSelector((state) => currentId ? state.apps.find((p) => p._id === currentId) : null)
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const user = JSON.parse(localStorage.getItem('profile'))
 
   useEffect(() => {
     if(app) setAppData(app)
@@ -26,9 +27,9 @@ const Form = ({ currentId, setCurrentId}) => {
     e.preventDefault()
 
     if(currentId) {
-      dispatch(updateApp(currentId, appData))
+      dispatch(updateApp(currentId, {...appData, name: user?.result?.user}))
     } else{
-      dispatch(createApp(appData))
+      dispatch(createApp({ ...appData, name: user?.result?.user}))
     }
 
     clear()
@@ -43,6 +44,17 @@ const Form = ({ currentId, setCurrentId}) => {
       dateApplied: "",
       apptrackerURL: "",
     })
+  }
+
+  if(!user?.result?.user) {
+    return (
+      <div className='cannotCreate'>
+        <p>Please Sign in or Sign up to track Applications </ p>
+
+        <p> To use a demo user, enter the following credentials:</p>
+        <p> UserName - DemoUser | Password - DemoUser</p>
+      </div>
+    )
   }
   return (
     <div className='app__form-container app__flex'>

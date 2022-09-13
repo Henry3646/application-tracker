@@ -5,7 +5,9 @@ const appSchema = mongoose.Schema({
     role: String,
     status: String,
     dateApplied: String,
-    apptrackerURL: String
+    apptrackerURL: String,
+    creator: String,
+    name: String
 })
 
 const Application = mongoose.model('Application', appSchema)

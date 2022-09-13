@@ -7,13 +7,11 @@ const Apps = ({ setCurrentId }) => {
 
   const apps = useSelector((state) => state.apps)
 
-  console.log(apps)
   return (
     <div className='app__apps-container app__flex'>
         {apps.map((app) => (
-          <div key={app._id}>
-            <Application app={app} setCurrentId={setCurrentId}/>
-          </div>
+            <Application app={app} setCurrentId={setCurrentId}
+            key={app._id}/>
         ))}
     </div>
   )

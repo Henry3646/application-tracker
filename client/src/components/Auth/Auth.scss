@@ -1,0 +1,56 @@
+.app__auth {
+    flex-direction: column;
+    text-align: center;
+    border: 3px solid var(--primary-black);
+    border-radius: 20px;
+    padding: 1rem 1rem;
+    width: 25rem;
+    position: fixed;
+    
+    @media screen and (max-width: 900px) {
+        width: 20rem;
+        
+    }
+    .signin {
+        flex-direction: column;
+        h1 {
+            font-size: 1.75rem;
+        }
+        form {
+            flex-direction: column;
+            gap: 1rem;
+
+            input {
+                padding: 1rem 2rem 1rem 0.5rem;
+                transition: 0.15s ease-in-out;
+                background-color: var(--primary-white);
+                border: 1px solid var(--primary-black);
+                width: 17.5rem;
+
+                &:focus, &:hover {
+                    outline: none;
+                    border: 1px solid var(--primary-blue);
+                    box-shadow: 0 0 1px 1px var(--primary-blue);
+                }
+            }
+
+            button {
+                width: 12.5rem;
+                background-color: var(--primary-white);
+                border: 1px solid var(--primary-black);
+                transition: 0.15s ease-in-out;
+                padding: 1rem 0rem;
+                font-size: 1.2rem;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: var(--primary-black);
+                    color: var(--primary-blue);
+                }
+            }
+        }
+
+
+
+    }   
+}

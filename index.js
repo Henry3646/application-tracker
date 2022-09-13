@@ -5,6 +5,7 @@ import cors from 'cors'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
 import appsRoutes from './routes/Apps.js'
+import userRoutes from './routes/Users.js'
 dotenv.config()
 
 const app = express()
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extender: true}))
 app.use(cors())
 
 app.use('/apps', appsRoutes)
+app.use('/user', userRoutes)
 
 const PORT = process.env.PORT || 3001
 

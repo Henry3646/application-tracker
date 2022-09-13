@@ -1,8 +1,19 @@
 import axios from "axios";
 
-const url = "/apps"
+const API = axios.create({ baseURL: 'http://localhost:3001' })
 
-export const fetchApps = () => axios.get(url);
-export const createApp = (newApp) => axios.post(url, newApp)
-export const updateApp = (id, updatedApp) => axios.patch(`${url}/${id}`, updatedApp)
-export const deleteApp = (id) => axios.delete(`${url}/${id}`)
+API.interceptors.request.use((req) => {
+    if(localStorage.getItem('profile')) {
+        req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`
+    }
+
+    return req
+})
+
+export const fetchApps = () => API.get('/apps');
+export const createApp = (newApp) => API.post('/apps', newApp)
+export const updateApp = (id, updatedApp) => API.patch(`/apps/${id}`, updatedApp)
+export const deleteApp = (id) => API.delete(`/apps/${id}`)
+
+export const signin = (formData) => API.post('/user/signin', formData)
+export const signup = (formData) => API.post('/user/signup', formData)

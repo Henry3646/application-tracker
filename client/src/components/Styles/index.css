@@ -1,18 +1,17 @@
 :root {
-  --primary-black: #000000;
-  --secondary-black: #000000;
-  --primary-blue: #09ff00;
+  --primary-blue: #04FFF7 ;
+  --primary-black: #222831;
+  --secondary-black: #393E46;
+  --primary-white: #EEEEEE;
 }
 
 body {
-  background-color: var(--primary-black);
-  color: var(--primary-blue);
+  margin: 0;
   font-family: "Roboto", sans-serif;
-  width: 100vw;
+  background-color: var(--primary-white);
   overflow-x: hidden;
 }
 
 #root {
-  min-height: 80vh;
   position: relative;
 }/*# sourceMappingURL=index.css.map */

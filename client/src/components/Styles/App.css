@@ -5,13 +5,13 @@
 }
 
 .app__app {
-  width: 100%;
-  min-height: 98vh;
   position: relative;
   gap: 5rem;
+  flex-direction: column;
+  min-height: 100vh;
 }
 @media screen and (max-width: 900px) {
   .app__app {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=App.css.map */

@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import App from './App'
 import './components/Styles/index.css'
 import { Provider } from 'react-redux'
@@ -10,10 +10,11 @@ import reducers from './reducers'
 
 
 const store = createStore(reducers, compose(applyMiddleware(thunk)))
+const container = document.getElementById('root')
+const root = createRoot(container)
 
-ReactDOM.render(
+root.render(
     <Provider store={store}>
         <App />
     </Provider>
-    , document.getElementById('root')
 )

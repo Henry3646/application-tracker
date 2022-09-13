@@ -1,0 +1,16 @@
+.app__home {
+  gap: 0rem;
+  width: 100%;
+  min-height: 98vh;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10rem;
+}
+@media screen and (max-width: 900px) {
+  .app__home {
+    flex-direction: column-reverse;
+    padding-top: 12rem;
+    gap: 3rem;
+    align-items: center;
+  }
+}/*# sourceMappingURL=Home.css.map */

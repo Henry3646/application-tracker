@@ -1,4 +1,11 @@
 .app__apps-container {
   flex-direction: column;
+  width: 100%;
+  max-width: 2000px;
   gap: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .app__apps-container {
+    padding-bottom: 5rem;
+  }
 }/*# sourceMappingURL=Apps.css.map */

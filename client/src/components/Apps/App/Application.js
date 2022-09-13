@@ -6,10 +6,11 @@ import './Application.css'
 
 const Application = ({ app, setCurrentId }) => {
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const user = JSON.parse(localStorage.getItem('profile'))
 
-
-  return (
+  if (user?.result?._id === app?.creator) {
+    return(
     <div className='app__app-container app__flex'>
       <div className='company-info app__flex'>
         <div className='company'>{app.company}</div>
@@ -27,6 +28,10 @@ const Application = ({ app, setCurrentId }) => {
         </button>
       </div>
     </div>
+    )
+  }
+  return (
+    false
   )
 }
 

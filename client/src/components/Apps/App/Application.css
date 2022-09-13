@@ -1,113 +1,105 @@
 .app__app-container {
-  width: 55rem;
+  border: 5px solid var(--primary-black);
+  width: 95%;
+  max-width: 1500px;
   background-color: var(--secondary-black);
-  padding: 0.5rem 0rem;
-  border: 4px solid var(--primary-blue);
-  border-radius: 20px;
-  transition: 0.2s ease-in-out;
+  color: var(--primary-white);
+  border-radius: 0px;
 }
 @media screen and (max-width: 900px) {
   .app__app-container {
     flex-direction: column;
-    width: 80vw;
   }
 }
-.app__app-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px 1px var(--primary-blue);
-}
 .app__app-container .company-info {
-  border-right: 2px solid var(--primary-blue);
-  padding: 0rem 1rem;
+  width: 15%;
+  padding: 1rem 0rem;
   flex-direction: column;
   align-items: flex-start;
-  width: 20%;
+  padding-left: 2rem;
 }
 @media screen and (max-width: 900px) {
   .app__app-container .company-info {
-    border-right: none;
-    border-bottom: 2px solid var(--primary-blue);
-    padding: 1rem 0rem;
+    width: 80%;
+    text-align: center;
     align-items: center;
-    width: 90%;
+    padding-left: 0;
+    border-bottom: 2px solid var(--primary-blue);
+    font-size: 1.5rem;
   }
 }
 .app__app-container .company-info .company {
   font-size: 1.2rem;
-  color: white;
+}
+@media screen and (max-width: 900px) {
+  .app__app-container .company-info .company {
+    font-size: 2rem;
+  }
+}
+.app__app-container .company-info .role {
+  color: var(--primary-blue);
 }
 .app__app-container .status {
-  border-right: 2px solid var(--primary-blue);
-  padding: 1rem 1rem;
   width: 20%;
+  padding: 1rem 0rem;
 }
 @media screen and (max-width: 900px) {
   .app__app-container .status {
-    border-right: none;
+    width: 80%;
+    font-size: 1.3rem;
     border-bottom: 2px solid var(--primary-blue);
-    padding: 1rem 0rem;
-    width: 90%;
   }
 }
 .app__app-container .dateapplied {
-  border-right: 2px solid var(--primary-blue);
-  padding: 1rem 1rem;
   width: 20%;
+  padding: 1rem 0rem;
 }
 @media screen and (max-width: 900px) {
   .app__app-container .dateapplied {
-    border-right: none;
+    width: 80%;
+    font-size: 1.3rem;
     border-bottom: 2px solid var(--primary-blue);
-    padding: 1rem 0rem;
-    width: 90%;
   }
 }
 .app__app-container .URL {
-  border-right: 2px solid var(--primary-blue);
-  padding: 1rem 1rem;
   width: 20%;
+  padding: 1rem 0rem;
+}
+.app__app-container .URL a {
+  color: var(--primary-blue);
 }
 @media screen and (max-width: 900px) {
   .app__app-container .URL {
-    border-right: none;
+    width: 80%;
+    font-size: 1.3rem;
     border-bottom: 2px solid var(--primary-blue);
-    padding: 1rem 0rem;
-    width: 90%;
   }
-}
-.app__app-container .URL .link {
-  color: var(--primary-blue);
-  transition: 0.2s ease-in-out;
-}
-.app__app-container .URL .link:hover {
-  color: white;
 }
 .app__app-container .buttons {
-  padding: 0rem 1rem;
-}
-@media screen and (max-width: 900px) {
-  .app__app-container .buttons {
-    border-right: none;
-    width: 90%;
-    padding: 1rem 0rem;
-  }
+  width: 20%;
+  padding: 1rem 0rem;
+  gap: 1rem;
+  transition: 0.15s ease-in-out;
 }
 .app__app-container .buttons button {
   background-color: transparent;
   border: none;
 }
-.app__app-container .buttons button i {
-  font-size: 1.5rem;
-  color: var(--primary-blue);
-  transition: 0.1s ease-out;
-}
-.app__app-container .buttons button .fa-trash:hover {
+.app__app-container .buttons button:hover {
   cursor: pointer;
+}
+.app__app-container .buttons .fa-solid {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  transition: 0.15s ease-in-out;
+}
+.app__app-container .buttons .fa-trash:hover {
   color: red;
+  cursor: pointer;
   transform: scale(1.1);
 }
-.app__app-container .buttons button .fa-pen-to-square:hover {
-  color: rgb(0, 255, 0);
+.app__app-container .buttons .fa-pen-to-square:hover {
   cursor: pointer;
+  color: rgb(0, 255, 0);
   transform: scale(1.1);
 }/*# sourceMappingURL=Application.css.map */

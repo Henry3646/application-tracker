@@ -1,7 +1,8 @@
 import mongoose from "mongoose"
 import Application from "../models/application.js"
 
-export const getApps = async (req, res) => {
+export const getApps = async (req, res) => {   
+    const { id } = req.params
     try {
         const applications = await Application.find()
         console.log(applications)
@@ -14,7 +15,9 @@ export const getApps = async (req, res) => {
 
 export const createApp = async (req, res) => {
     const application = req.body
-    const newApplication = new Application(application)
+    const newApplication = new Application({...application, creator: req.userId})
+
+    if(!req.userId) return res.json({message: 'Unauthenticated' })
     try {
         await newApplication.save()
         res.status(201).json(newApplication)

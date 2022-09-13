@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './components/Styles/App.css'
-import Apps from './components/Apps/Apps.js'
-import Form from './components/Form/Form.js'
-import { useDispatch } from 'react-redux'
-import { getApps } from './actions/apps'
+import Navbar from './components/Navbar/Navbar'
+import Home from './components/Home/Home.js'
+import Auth from './components/Auth/Auth.js'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 
 const App = () => {
-
-  const [currentId, setCurrentId] = useState(null)
-
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getApps())
-  }, [currentId, dispatch])
-
   return (
-    <div className='app__app app__flex'>
-      <Apps setCurrentId={setCurrentId}/>
-      <Form currentId={currentId} setCurrentId={setCurrentId}/>
-    </div>
+    <BrowserRouter>
+      <div className='app__app app__flex'>
+        <Navbar />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/auth" exact element={<Auth />} />
+        </Routes>
+        
+      </div>
+    </BrowserRouter>
   )
 }
 
